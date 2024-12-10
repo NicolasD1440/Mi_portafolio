@@ -20,7 +20,7 @@
 
 
   <div class="card">
-    <img src="Recursos/profile.jpg" alt="Profile Picture">
+    <img src="Recursos/perfil.jpeg" alt="Profile Picture">
     <h2>Deivy Nicolas Castiblanco Infante</h2>
     <p>Desarrollador front | Desarrollador Back.</p>
      <div class="redes">
@@ -61,13 +61,16 @@
           <p>CERTIFICACIONES</p>
         </div>
         </div>
+
       <div class="cards-container">
           <!-- Primera Card -->
           <div class="card-item orange">
             <i class="fa-solid fa-layer-group"></i>
             <h3>MIS PROYECTOS FINALIZADOS</h3>
             <button class="arrow-btn">
+              <a href="#" id="ir-a-seccion">
               <i class="fa-solid fa-arrow-right"></i>
+            </a>
             </button>
           </div>
           <!-- Segunda Card -->
@@ -79,10 +82,76 @@
             </button>
           </div>
         </div>
+        <div class="proyectos">
+        <h1>
+          <span class="highlight">PROYECTOS</span> 
+          <br>
+          <span class="normal">RECIENTES</span>
+      </h1>
+        </div>
+
+        <section id="seccion-destino">
+        <div class="proreciente">
+          <div class="proreciente-img">
+            <img src="Recursos/food.png" alt="Proyecto 1">
+          </div>
+          <div class="proreciente-content">
+            <h3>JJD-FOOD</h3>
+            <p>WEB PARA RESTAURANTES RESPONSIVA</p>
+          </div>
+          <a href="enlace-de-fecha.html" class="flecha-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+        </section>
+
+        <div class="proreciente">
+          <div class="proreciente-img">
+            <img src="Recursos/MOVILE.png" alt="Proyecto 1">
+          </div>
+          <div class="proreciente-content">
+            <h3>JJD-FOOD MOBILE</h3>
+            <p>APLICACION ANDROID PARA RESTAURANTES DE COMIDAS RAPIDAS</p>
+          </div>
+          <a href="enlace-de-fecha.html" class="flecha-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+
+        <div class="proreciente">
+          <div class="proreciente-img">
+            <img src="Recursos/genesis.png"Imagen del proyecto">
+          </div>
+          <div class="proreciente-content">
+            <h3>GENESIS PRO</h3>
+            <p>WEB PARA LA GESTION DE NOTAS ESCOLARES</p>
+          </div>
+         
+          <a href="enlace-de-fecha.html" class="flecha-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        
+        
+
     </div>
   </div>
 
-
-  
+  <script>
+    // Añadir un listener de evento al ícono de desplazamiento
+    document.getElementById("ir-a-seccion").addEventListener("click", function(e) {
+      e.preventDefault(); // Prevenir el comportamiento por defecto de los enlaces
+      
+      // Obtener el destino al que nos queremos desplazar
+      const destino = document.getElementById("seccion-destino");
+      
+      // Realizar el desplazamiento suave
+      destino.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+  </script>
 </body>
 </html>
