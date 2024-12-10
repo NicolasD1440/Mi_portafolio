@@ -1,0 +1,281 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .portfolio-container {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  /* Tarjeta */
+  .card {
+    position: fixed; /* Hace que la tarjeta esté fija en la ventana */
+    bottom: 20px; /* A 20px desde la parte inferior */
+    left: 20px; /* A 20px desde la parte izquierda */
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Ancho fijo */
+    text-align: center; /* Centra el contenido dentro de la tarjeta */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  }
+
+  .main-container {
+    display: flex; /* Diseño en columnas */
+    align-items: flex-start; /* Alinea los elementos al inicio vertical */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    padding: 20px;
+    padding-top: 160px;
+    margin-left: 480px; /* Deja espacio suficiente para la tarjeta */
+    gap: 20px; /* Espacio entre la tarjeta y el texto */
+  }
+
+  h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .highlight {
+    color: #fff; /* Blanco para la palabra "Software" */
+  }
+  
+  .normal {
+     color: rgba(182, 180, 189, 0.2);  /* Gris para la palabra "Engineer" */
+  }
+  
+
+/* Imagen dentro de la tarjeta */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  
+  /* Título y descripción dentro de la tarjeta */
+  .card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555;
+  }
+
+ /* Línea decorativa */
+.decorative-line {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 2px dashed #ff6600;
+    top: -10px;
+    right: -10px;
+    border-radius: 50%;
+    z-index: 2; /* Asegura que esté encima de la imagen */
+  }
+  
+  /* Texto Principal */
+  .info h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .info p {
+    font-size: 1rem;
+    color: #aaa;
+  }
+
+  .icono {
+    font-size: 25px; /* Ajusta el tamaño del ícono según lo que necesites */
+    margin-left: 25px;
+  }
+
+  .redes {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 15px; /* Espaciado entre los íconos */
+    margin-top: 10px; /* Separación del contenido superior */
+  }
+  
+  .redes .icono {
+    font-size: 25px; /* Tamaño inicial de los íconos */
+    color: #000000; /* Color blanco */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animación suave */
+  }
+  
+  .redes .icono:hover {
+    transform: scale(1.2); /* Agranda el ícono al pasar el cursor */
+  }
+  
+  /* Estadísticas */
+  .stats {
+    display: flex; 
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    gap: 30px;
+    margin: 20px 0;
+  }
+  
+  .stats div {
+    text-align: center;
+  }
+  
+  .stats h3 {
+    font-size: 3.3rem;
+    color: #ffffff;
+  }
+  
+  .stats p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+ /* Contenedor de los iconos */
+/* Estilos generales de la barra */
+.icon-bar {
+  position: fixed;
+  top: 25px;
+  margin-bottom: 25px;
+  display: flex; /* Alinea los iconos en fila */
+  background-color: #1e1e1e; /* Color de fondo del contenedor */
+  border-radius: 25px; /* Bordes redondeados */
+  gap: 25px; /* Espaciado entre iconos */
+  padding: 10px;
+}
+
+/* Estilo de los iconos */
+.barra {
+  font-size: 18px;
+  color: white;
+  position: relative; /* Necesario para posicionar el tooltip */
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Tooltip */
+.barra::after {
+  content: attr(data-tooltip); /* Toma el texto del atributo data-tooltip */
+  position: absolute;
+  bottom: 110%; /* Posiciona el tooltip encima del ícono */
+  left: 50%; /* Centra el tooltip horizontalmente */
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif; /* Usa la misma tipografía para consistencia */
+  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  opacity: 0; /* Lo hace invisible inicialmente */
+  pointer-events: none; /* Evita interferir con el cursor */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover para mostrar el tooltip */
+.barra:hover::after {
+  opacity: 1; /* Hace visible el tooltip */
+  transform: translateX(-50%) translateY(-5px); /* Lo eleva ligeramente */
+  pointer-events: auto;
+}
+
+/* Efecto hover para el ícono */
+.barra:hover {
+  transform: scale(1.2); /* Agranda el ícono ligeramente */
+}
+
+ /* --------------------------- */
+
+ /* Contenedor de las nuevas tarjetas */
+ 
+.cards-container {
+  display: flex; /* Acomoda las tarjetas en fila */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  justify-content: flex-start;
+  gap: 20px; /* Espaciado entre las tarjetas */
+  margin-top: 50px; /* Separación entre las estadísticas y las tarjetas */
+}
+
+/* Tarjetas individuales */
+.card-item {
+  width: 250px; /* Ajusta el tamaño de las tarjetas */
+  height: 180px; /* Altura fija */
+  border-radius: 15px; /* Bordes redondeados */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  color: #fff; /* Texto blanco */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  transition: transform 0.3s ease; /* Efecto de animación al pasar el cursor */
+}
+
+/* Estilos para la tarjeta naranja */
+.card-item.orange {
+  background-color: #ff6600; /* Naranja brillante */
+}
+
+/* Estilos para la tarjeta lima */
+.card-item.lime {
+  background-color: #d0f91f; /* Verde lima */
+  color: #000;
+}
+
+/* Iconos dentro de las tarjetas */
+.card-item i {
+  font-size: 2.5rem; /* Tamaño del icono */
+}
+
+/* Título de las tarjetas */
+.card-item h3 {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.4; /* Mejor espacio entre líneas */
+}
+
+/* Botón con flecha */
+.arrow-btn {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%; /* Forma circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.arrow-btn i {
+  font-size: 1rem;
+  color: #fff; /* Color blanco */
+}
+
+.arrow-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Efecto hover */
+}
+
+/* Hover en tarjetas */
+.card-item:hover {
+  transform: translateY(-5px); /* Eleva ligeramente la tarjeta */
+}
