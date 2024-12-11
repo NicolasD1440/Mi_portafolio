@@ -21,6 +21,7 @@
 
   <div class="card">
     <img src="Recursos/perfil.jpeg" alt="Profile Picture">
+    
     <h2>Deivy Nicolas Castiblanco Infante</h2>
     <p>Desarrollador front | Desarrollador Back.</p>
      <div class="redes">
@@ -66,9 +67,10 @@
           <!-- Primera Card -->
           <div class="card-item orange">
             <i class="fa-solid fa-layer-group"></i>
-            <h3>MIS PROYECTOS FINALIZADOS</h3>
+            <a href="#" id="ir-a-seccion"><h3>MIS PROYECTOS FINALIZADOS</h3></a>
+          </a>
             <button class="arrow-btn">
-              <a href="#" id="ir-a-seccion">
+              <a href="#" id="ir-a-div">
               <i class="fa-solid fa-arrow-right"></i>
             </a>
             </button>
@@ -76,9 +78,11 @@
           <!-- Segunda Card -->
           <div class="card-item lime">
             <i class="fa-regular fa-window-maximize"></i>
-            <h3>MIS CERTIFICACIOS Y CURSOS</h3>
+            <a href="#" id="ir-a-seccion2"><h3>MIS CERTIFICACIOS Y CURSOS</h3></a>
             <button class="arrow-btn">
+              <a href="#" id="ir-a-seccion3">
               <i class="fa-solid fa-arrow-right"></i>
+            </a>
             </button>
           </div>
         </div>
@@ -134,7 +138,98 @@
         </div>
 
         
-        
+        <div class="certificados">
+          <h1>
+            <span class="highlight">MIS CERTIFICADOS</span> 
+            <br>
+            <span class="normal">Y CURSOS</span>
+        </h1>
+          </div>
+
+          <section id="seccion-destino2">
+          <div class="proreciente">
+            <div class="proreciente-content">
+              <h3>CURSO 1</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                 <br>
+              <p>2023-2024</p>
+            </div>
+           
+            <a href="enlace-de-fecha.html" class="flecha-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>
+        </section>
+
+        <div class="proreciente">
+          <div class="proreciente-content">
+            <h3>CURSO 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+               <br>
+            <p>2023-2024</p>
+          </div>
+         
+          <a href="enlace-de-fecha.html" class="flecha-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+
+        <div class="proreciente">
+          <div class="proreciente-content">
+            <h3>CURSO 3</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+               quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+               <br>
+            <p>2023-2024</p>
+          </div>
+         
+          <a href="enlace-de-fecha.html" class="flecha-link">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+  
+
+        <div class="certificados">
+          <h1>
+            <span class="highlight">MIS HABILIDADES</span> 
+            <br>
+            <span class="normal">Y HERRAMIENTAS</span>
+        </h1>
+          </div>
+
+          <div class="habilidad-container">
+          <div class="habilidad">
+            <div class="habilidad-img">
+              <img src="Recursos/food.png" alt="Proyecto 1">
+            </div>
+            <div class="habilidad-content">
+              <h3>HTML</h3>
+              <p>HABILIDAD FRONT / INTERMEDIO</p>
+            </div>
+          </div>
+
+          <div class="habilidad">
+            <div class="habilidad-img">
+              <img src="Recursos/food.png" alt="Proyecto 1">
+            </div>
+            <div class="habilidad-content">
+              <h3>CSS</h3>
+              <p>HABILIDAD FRONT / INTERMEDIO</p>
+            </div>
+          </div>
+
+          <div class="habilidad">
+            <div class="habilidad-img">
+              <img src="Recursos/html-5.png" alt="Proyecto 1">
+            </div>
+            <div class="habilidad-content">
+              <h3>PHP</h3>
+              <p>HERRAMIENTA BACK / INTERMEDIO</p>
+            </div>
+          </div>
+        </div>
 
     </div>
   </div>
@@ -152,6 +247,47 @@
         behavior: "smooth"
       });
     });
+
+     // Añadir un listener de evento al ícono de desplazamiento
+     document.getElementById("ir-a-div").addEventListener("click", function(e) {
+      e.preventDefault(); // Prevenir el comportamiento por defecto de los enlaces
+      
+      // Obtener el destino al que nos queremos desplazar
+      const destino = document.getElementById("seccion-destino");
+      
+      // Realizar el desplazamiento suave
+      destino.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
+
+    // Añadir un listener de evento al ícono de desplazamiento
+    document.getElementById("ir-a-seccion2").addEventListener("click", function(e) {
+      e.preventDefault(); // Prevenir el comportamiento por defecto de los enlaces
+      
+      // Obtener el destino al que nos queremos desplazar
+      const destino = document.getElementById("seccion-destino2");
+      
+      // Realizar el desplazamiento suave
+      destino.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
+    // Añadir un listener de evento al ícono de desplazamiento
+    document.getElementById("ir-a-seccion3").addEventListener("click", function(e) {
+      e.preventDefault(); // Prevenir el comportamiento por defecto de los enlaces
+      
+      // Obtener el destino al que nos queremos desplazar
+      const destino = document.getElementById("seccion-destino2");
+      
+      // Realizar el desplazamiento suave
+      destino.scrollIntoView({
+        behavior: "smooth"
+      });
+    });
+
   </script>
 </body>
 </html>

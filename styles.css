@@ -38,7 +38,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 300px; /* Ancho fijo */
     text-align: center; /* Centra el contenido dentro de la tarjeta */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
   }
 
   .main-container {
@@ -47,10 +47,11 @@
     max-width: 1200px; /* Ancho máximo del contenedor */
     margin: 0 auto; /* Centra el contenedor en la página */
     padding: 20px;
-    padding-top: 80%;
+    padding-top: 150%;
     margin-left: 480px; /* Deja espacio suficiente para la tarjeta */
     gap: 20px; /* Espacio entre la tarjeta y el texto */
   }
+
 
   h1 {
     font-size: 5rem;
@@ -69,6 +70,7 @@
 
 /* Imagen dentro de la tarjeta */
 .card img {
+  position: relative;
     width: 100%;
     height: auto;
     border-radius: 15px;
@@ -257,6 +259,10 @@
   font-weight: bold;
   line-height: 1.4; /* Mejor espacio entre líneas */
 }
+a {
+  text-decoration: none; /* Quita el subrayado */
+  color: inherit; /* Hereda el color del elemento padre */
+}
 
 /* Botón con flecha */
 .arrow-btn {
@@ -358,3 +364,68 @@
   background-color: #2b2b2b;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
 }
+
+.pixelforge-section {
+  background-color: #222; /* Fondo ligeramente más claro */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+  margin: 20px auto; /* Margen superior e inferior y centrado */
+  width: 80%; /* Ancho máximo del div */
+}
+
+.habilidad-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 180px;
+}
+
+.habilidad h1{
+  padding-top: 50px;
+ }
+ 
+ .habilidad {
+   display: flex;
+   align-items: flex-start;
+   margin-bottom: 20px;
+   background-color: #121212;
+   padding: 16px;
+   border-radius: 12px;
+   width: 100%;
+   max-width: 300px;
+ }
+ 
+ .habilidad-img {
+   width: 70px;
+   height: 70px;
+   overflow: hidden;
+   margin-right: 16px;
+   border-radius: 8px;
+   flex-shrink: 0;
+   background-color: #fff;
+   text-align: center;
+ }
+ 
+ .habilidad-img img {
+   width: 80%;
+   height: 80%;
+   object-fit: cover;
+   transform: translateY(8px);
+ }
+ 
+ .habilidad-content {
+   flex-grow: 1;
+ }
+ 
+ .habilidad-content h3 {
+   font-size: 18px;
+   font-weight: bold;
+   color: #fff;
+ }
+ 
+ .habilidad-content p {
+   font-size: 14px;
+   color: #aaa;
+   margin-top: 8px;
+ }
+ 
