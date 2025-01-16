@@ -17,7 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: 0;
   }
   
   .portfolio-container {
@@ -42,12 +42,12 @@
   }
 
   .main-container {
+    position: absolute;
     display: flex; /* Diseño en columnas */
     align-items: flex-start; /* Alinea los elementos al inicio vertical */
     max-width: 1200px; /* Ancho máximo del contenedor */
     margin: 0 auto; /* Centra el contenedor en la página */
     padding: 20px;
-    padding-top: 150%;
     margin-left: 480px; /* Deja espacio suficiente para la tarjeta */
     gap: 20px; /* Espacio entre la tarjeta y el texto */
   }
@@ -160,14 +160,16 @@
  /* Contenedor de los iconos */
 /* Estilos generales de la barra */
 .icon-bar {
-  position: fixed;
+  position: absolute;
   top: 25px;
-  margin-bottom: 25px;
-  display: flex; /* Alinea los iconos en fila */
-  background-color: #1e1e1e; /* Color de fondo del contenedor */
-  border-radius: 25px; /* Bordes redondeados */
-  gap: 25px; /* Espaciado entre iconos */
-  padding: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background-color: #1e1e1e;
+  border-radius: 25px;
+  gap: 25px;
+  padding: 5px; /* Ajusta el padding si es necesario */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 
 /* Estilo de los iconos */

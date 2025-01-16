@@ -1,0 +1,481 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+ .portfolio-container {
+    text-align: center;
+    max-width: 600px;
+  }
+
+ /* Tarjeta */
+ .card {
+    position: fixed; /* Hace que la tarjeta esté fija en la ventana */
+    bottom: 20px; /* A 20px desde la parte inferior */
+    left: 20px; /* A 20px desde la parte izquierda */
+    background: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 15px;
+    margin-left: 100px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px; /* Ancho fijo */
+    text-align: center; /* Centra el contenido dentro de la tarjeta */
+    z-index: 100; /* Asegura que esté por encima de otros elementos */
+  }
+
+  .card img {
+    position: relative;
+      width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+     /* Título y descripción dentro de la tarjeta */
+  .card h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .icono {
+    font-size: 25px; /* Ajusta el tamaño del ícono según lo que necesites */
+    margin-left: 25px;
+  }
+
+  .redes {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 15px; /* Espaciado entre los íconos */
+    margin-top: 10px; /* Separación del contenido superior */
+  }
+  
+  .redes .icono {
+    font-size: 25px; /* Tamaño inicial de los íconos */
+    color: #000000; /* Color blanco */
+    transition: transform 0.3s ease, color 0.3s ease; /* Animación suave */
+  }
+  
+  .redes .icono:hover {
+    transform: scale(1.2); /* Agranda el ícono al pasar el cursor */
+  }
+
+.icon-bar {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    background-color: #1e1e1e;
+    border-radius: 25px;
+    gap: 25px;
+    padding: 5px; /* Ajusta el padding si es necesario */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+.main-container {
+    display: flex; /* Diseño en columnas */
+    align-items: flex-start; /* Alinea los elementos al inicio vertical */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+    margin: 0 auto; /* Centra el contenedor en la página */
+    margin-left: 480px; /* Deja espacio suficiente para la tarjeta */
+    gap: 20px; /* Espacio entre la tarjeta y el texto */
+}
+ .info h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .info p {
+    font-size: 1rem;
+    color: #aaa;
+  }
+  /* Estadísticas */
+  .stats {
+    display: flex; 
+    justify-content: flex-start; /* Alinea los elementos a la izquierda */
+    gap: 30px;
+    margin: 20px 0;
+
+  }
+  
+  .stats div {
+    text-align: center;
+  }
+  
+  .stats h3 {
+    font-size: 3.3rem;
+    color: #ffffff;
+  }
+  
+  .stats p {
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+ /* --------------------------- */
+
+ /* Contenedor de las nuevas tarjetas */
+  .cards-container {
+    display: flex; /* Acomoda las tarjetas en fila */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    justify-content: flex-start;
+    gap: 20px; /* Espaciado entre las tarjetas */
+    margin-top: 50px; /* Separación entre las estadísticas y las tarjetas */
+  }
+  
+  /* Tarjetas individuales */
+  .card-item {
+    width: 250px; /* Ajusta el tamaño de las tarjetas */
+    height: 180px; /* Altura fija */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Poppins", sans-serif;
+    color: #fff; /* Texto blanco */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.3s ease; /* Efecto de animación al pasar el cursor */
+  }
+  
+  /* Estilos para la tarjeta naranja */
+  .card-item.orange {
+    background-color: #ff6600; /* Naranja brillante */
+  }
+  
+  /* Estilos para la tarjeta lima */
+  .card-item.lime {
+    background-color: #d0f91f; /* Verde lima */
+    color: #000;
+  }
+  
+  /* Iconos dentro de las tarjetas */
+  .card-item i {
+    font-size: 2.5rem; /* Tamaño del icono */
+  }
+  
+  /* Título de las tarjetas */
+  .card-item h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.4; /* Mejor espacio entre líneas */
+  }
+  a {
+    text-decoration: none; /* Quita el subrayado */
+    color: inherit; /* Hereda el color del elemento padre */
+  }
+/* Botón con flecha */
+.arrow-btn {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+  
+  .arrow-btn i {
+    font-size: 1rem;
+    color: #fff; /* Color blanco */
+  }
+  
+  .arrow-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efecto hover */
+  }
+  
+  /* Hover en tarjetas */
+  .card-item:hover {
+    transform: translateY(-5px); /* Eleva ligeramente la tarjeta */
+  }  
+/* Proyectos -------------------------- */
+.proyectos h1{
+    padding-top: 50px;
+   }
+   
+   .proreciente {
+     display: flex;
+     align-items: flex-start;
+     margin-bottom: 20px;
+     background-color: #121212;
+     padding: 16px;
+     border-radius: 12px;
+     width: 100%;
+     max-width: 600px;
+   }
+   
+   .proreciente-img {
+     width: 120px;
+     height: 120px;
+     overflow: hidden;
+     margin-right: 16px;
+     border-radius: 8px;
+     flex-shrink: 0;
+   }
+   
+   .proreciente-img img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+   }
+   
+   .proreciente-content {
+     flex-grow: 1;
+   }
+   
+   .proreciente-content h3 {
+     font-size: 18px;
+     font-weight: bold;
+     color: #fff;
+   }
+   
+   .proreciente-content p {
+     font-size: 14px;
+     color: #aaa;
+     margin-top: 8px;
+   }
+   
+   .flecha-link {
+     margin-left: auto;  /* Lo coloca en la parte derecha */
+     display: flex;
+     align-items: center;
+     color: #fff;
+     font-size: 20px;
+     text-decoration: none;
+     transition: color 0.3s;
+   }
+   
+   .flecha-link:hover {
+     color: #ff6600;  /* Cambio de color cuando pasa el mouse */
+   }
+   
+   .flecha-link i {
+     margin-left: 10px;
+   }
+   
+   /* Animación más suave al pasar el mouse */
+   .proreciente:hover {
+     transform: scale(1.03); /* Aumento más sutil */
+     background-color: #2b2b2b;
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+   }
+   
+   .pixelforge-section {
+     background-color: #222; /* Fondo ligeramente más claro */
+     border-radius: 10px; /* Bordes redondeados */
+     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra */
+     margin: 20px auto; /* Margen superior e inferior y centrado */
+     width: 80%; /* Ancho máximo del div */
+   }
+
+/* Habilidades */
+
+.habilidad-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-right: 180px;
+  }
+  
+  .habilidad h1{
+    padding-top: 50px;
+   }
+   
+   .habilidad {
+     display: flex;
+     align-items: flex-start;
+     margin-bottom: 20px;
+     background-color: #121212;
+     padding: 16px;
+     border-radius: 12px;
+     width: 100%;
+     max-width: 300px;
+   }
+   
+   .habilidad-img {
+     width: 70px;
+     height: 70px;
+     overflow: hidden;
+     margin-right: 16px;
+     border-radius: 8px;
+     flex-shrink: 0;
+     background-color: #fff;
+     text-align: center;
+   }
+   
+   .habilidad-img img {
+     width: 80%;
+     height: 80%;
+     object-fit: cover;
+     transform: translateY(8px);
+   }
+   
+   .habilidad-content {
+     flex-grow: 1;
+   }
+   
+   .habilidad-content h3 {
+     font-size: 18px;
+     font-weight: bold;
+     color: #fff;
+   }
+   
+   .habilidad-content p {
+     font-size: 14px;
+     color: #aaa;
+     margin-top: 8px;
+   }
+
+   @media (max-width: 1160px) {
+    .main-container {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+        padding-top: 15%;
+    }
+    .stats div, .card-item, .habilidad {
+        flex: 1 1 45%;
+    }
+    .proreciente {
+        flex-direction: column;
+    }
+    .TODO{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        position: initial;
+        transform: scale(1.5) translateY(90px) translateX(200px);
+   
+    }
+    .info h1 {
+        font-size: 3rem; /* Ajusta el tamaño del título */
+    }
+    .info p {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    }
+    .stats h3 {
+        font-size: 2.5rem; /* Ajusta el tamaño de las estadísticas */
+    }
+    .stats p {
+        font-size: 0.8rem; /* Ajusta el tamaño del texto de las estadísticas */
+    }
+    .info h1 {
+        font-size: 3rem; /* Ajusta el tamaño del título */
+    }
+    .info p {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    }
+    .stats h3 {
+        font-size: 2.5rem; /* Ajusta el tamaño de las estadísticas */
+    }
+    .stats p {
+        font-size: 0.8rem; /* Ajusta el tamaño del texto de las estadísticas */
+    }
+
+}
+   
+   @media (max-width: 900px) {
+    .main-container {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+        padding-top: 15%;
+       
+    }
+    .stats div, .card-item, .habilidad {
+        flex: 1 1 45%;
+    }
+    .proreciente {
+        flex-direction: column;
+    }
+    .TODO{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        position: initial;
+        transform: scale(1.2) translateY(90px) translateX(150px);
+   
+    }
+}
+
+@media (max-width: 800px) {
+    .main-container {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+        padding-top: 15%;
+        padding-left: 10px;
+    }
+    .stats div, .card-item, .habilidad {
+        flex: 1 1 45%;
+    }
+    .proreciente {
+        flex-direction: column;
+    }
+    .TODO{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        position: initial;
+        transform: scale(1) translateY(90px) translateX(50px);
+   
+    }
+    .cards-container{
+        display: grid;
+        padding-left: 150px;
+    }
+}
+
+
+@media (max-width: 500px) {
+    .main-container {
+        margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+        padding-top: 15%;
+    }
+    .stats div, .card-item, .habilidad {
+        flex: 1 1 45%;
+    }
+    .proreciente {
+        flex-direction: column;
+    }
+    .TODO{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .card{
+        position: initial;
+        transform: scale(0.7) translateY(90px) translateX(-25%);
+   
+    }
+    .info h1 {
+        font-size: 2rem; /* Ajusta el tamaño del título */
+    }
+    .info p {
+        font-size: 0.7rem; /* Ajusta el tamaño del texto */
+    }
+    .stats h3 {
+        font-size: 1.5rem; /* Ajusta el tamaño de las estadísticas */
+    }
+    .stats p {
+        font-size: 0.6rem; /* Ajusta el tamaño del texto de las estadísticas */
+    }
+
+    .cards-container{
+        display: grid;
+        padding-left: 50px;
+    }
+
+    .proreciente{
+      width: 380px
+    }
+
+}
